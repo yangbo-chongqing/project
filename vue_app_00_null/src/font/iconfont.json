@@ -1,0 +1,44 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "394752",
+      "name": "iconfont-arrowdown",
+      "font_class": "iconfontarrowdown",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "445523",
+      "name": "iconfont",
+      "font_class": "iconfont",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "1146281",
+      "name": "iconfont_up",
+      "font_class": "icon11",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "1240028",
+      "name": "Iconfont_name",
+      "font_class": "football_name",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "1264637",
+      "name": "好房拓 4.0.0 iconfont 2_电梯",
+      "font_class": "haofangtuo400iconfont2dianti",
+      "unicode": "e6f8",
+      "unicode_decimal": 59128
+    }
+  ]
+}
