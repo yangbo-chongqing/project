@@ -5,6 +5,7 @@ import ViewUI from 'view-design';//引入view UI组件
 Vue.use(ViewUI)
 import 'view-design/dist/styles/iview.css'
 
+
 //功能一：引入和配置mint-ui组件库
 // 1:引入mint-ui所有组件
 import MintUI from "mint-ui"
@@ -18,11 +19,11 @@ import "./font/iconfont.css"
 // 1：引入axios库
 import axios from "axios"
 // 2：配置访问服务器基础路径
-axios.defaults.baseURL="http://127.0.0.1:4000/"
+axios.defaults.baseURL = "http://127.0.0.1:4000/"
 // 3：配置保存session数据
-axios.defaults.withCredentials=true
+axios.defaults.withCredentials = true
 // 4：注册
-Vue.prototype.axios=axios;
+Vue.prototype.axios = axios;
 
 // 功能四：引入全局对象vuex存储数据
 // 1：引入vuex
@@ -30,26 +31,26 @@ import Vuex from "vuex"
 // 2：注册vuex  
 Vue.use(Vuex);
 // 3：创建存储对象
-var store= new Vuex.Store({
-  state:{
+var store = new Vuex.Store({
+  state: {
     //全局共享数据
-    fa:12, // 亮哥头发数量
-    cartCount:0,//购物车中商品数量
+    fa: 12, // 亮哥头发数量
+    cartCount: 0,//购物车中商品数量
   },
-  mutations:{
+  mutations: {
     // 所有修改全局共享数据函数
-    subFa(state){
+    subFa(state) {
       state.fa--
     },
-    subCart(state){state.cartCount--},
-    addCart(state,n){state.cartCount=n},
-    clearCart(state){state.cartCount=0}
+    subCart(state) { state.cartCount-- },
+    addCart(state, n) { state.cartCount = n },
+    clearCart(state) { state.cartCount = 0 }
   },
-  getters:{
+  getters: {
     // 所有获取全局共享数函数
-    getFa(state){return state.fa},
-    getCartCount(state){return state.cartCount}
-    
+    getFa(state) { return state.fa },
+    getCartCount(state) { return state.cartCount }
+
   }
 })
 // 4：将存储对象添加vue实例中
