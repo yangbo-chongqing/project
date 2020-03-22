@@ -3,8 +3,9 @@ import App from './App.vue' //根组件
 import router from './router'//路由模块
 import ViewUI from 'view-design';//引入view UI组件
 Vue.use(ViewUI)
-import 'view-design/dist/styles/iview.css'
-
+import 'swiper/css/swiper.css'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+Vue.use(VueAwesomeSwiper)
 
 //功能一：引入和配置mint-ui组件库
 // 1:引入mint-ui所有组件

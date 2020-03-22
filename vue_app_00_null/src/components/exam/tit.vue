@@ -20,7 +20,7 @@
     </div>
     <div class="btn-seach">
       <input type="text" placeholder="搜索歌曲、歌手、MV" />
-      <img style="width:20px;" src="../../img/搜索.png" alt />
+      <img src="../../img/搜索.png" alt />
     </div>
     <div class="simg">
       <ul>
@@ -50,8 +50,9 @@
   justify-content: space-around;
   width: 100%;
   background: #070707;
-  height: 70px;
+  height: auto;
   align-items: center; /*所有子元素垂直居中*/
+  min-width: 1024px;
 }
 .btn-seach {
   /*搜索父级*/
@@ -60,13 +61,14 @@
   height: 2rem;
   width: 15%;
   position: relative;
+  min-width: 250px;
 }
 .btn-seach input {
   /*搜索下的输入框*/
   background: #232323;
   border: 0;
   align-content: center;
-  height: 100%;
+  height: 90%;
   margin-left: 2rem;
   outline: none; /*去掉input的轮廓*/
   font-size: 16px;
@@ -79,11 +81,12 @@
   top: 15%;
   opacity: 0.4;
   filter: alpha(opacity=40);
+  width: 8%;
 }
 ul > li {
   display: inline-block;
   margin-left: 2rem;
-  line-height: 70px;
+  line-height: 100%;
 }
 ul li img {
   width: 1.5rem;
@@ -99,5 +102,8 @@ ul li img {
 .titfont a {
   font-size: 20px;
   color: #dedede;
+}
+a {
+  text-decoration: none;
 }
 </style>
