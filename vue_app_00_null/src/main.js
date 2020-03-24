@@ -4,6 +4,7 @@ import router from './router'//路由模块
 import ViewUI from 'view-design';//引入view UI组件
 Vue.use(ViewUI)
 import 'swiper/css/swiper.css'
+import 'view-design/dist/styles/iview.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 Vue.use(VueAwesomeSwiper)
 

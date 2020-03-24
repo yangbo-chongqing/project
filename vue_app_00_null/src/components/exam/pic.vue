@@ -2,36 +2,33 @@
   <div class="fpic">
     <a href>
       <div class="imgp" @mousemove="play" @mouseout="unplay">
-        <img
-          class="firstimg"
-          src="http://d.musicapp.migu.cn/ugcdata/playListimg/7c5113ba-f115-4ab4-aadc-f29363492f13.jpg"
-          alt
-        />
+        <img class="firstimg" v-bind:src="pig" alt />
         <p>
           <img src="../../img/耳机.png" alt />
           {{read}}
         </p>
         <img
-          id="p3"
+          :id="key"
           class="lastimg"
           src="//cdnmusic.migu.cn/v3/static/img/common/default/btn-play.png"
           alt
         />
+        <span class="font">{{font}}</span>
       </div>
     </a>
   </div>
 </template>
 <script>
 export default {
-  props: ["pig", "read"],
+  props: ["pig", "read", "font", "key"], //父传子的参数
   methods: {
     play() {
-      let p3 = document.getElementById("p3");
-      p3.style.display = "block";
+      let p3 = document.getElementById(key);
+      p3.style.display = "block"; //设置鼠标移入事件
     },
     unplay() {
-      let p3 = document.getElementById("p3");
-      p3.style.display = "none";
+      let p3 = document.getElementById(key);
+      p3.style.display = "none"; //设置鼠标移出事件
     }
   }
 };
@@ -39,14 +36,14 @@ export default {
 <style  scoped>
 .fpic {
   overflow: hidden;
-  width: 160px;
+  width: 160px; /* 图片放大时不会影响其他布局*/
 }
 .firstimg {
   width: 100%;
   opacity: 1;
   padding: 0;
   margin: 0;
-  transform: scale(1);
+  transform: scale(1); /*图片变大动画*/
   transition: transform 1s ease 0s;
 }
 .firstimg:hover {
@@ -62,6 +59,7 @@ export default {
   overflow: hidden;
 }
 .fpic p {
+  /*图片中的文本框及耳机图标*/
   font-size: 12px;
   width: 40%;
   position: absolute;
@@ -75,10 +73,25 @@ export default {
   line-height: 24px;
 }
 .lastimg {
+  /*播放图标 */
   position: absolute;
   top: 35%;
   left: 35%;
   width: 30%;
   display: none;
+}
+.font {
+  /*图片下的文字内容*/
+  color: #666;
+  margin-top: 15px;
+  font-size: 14px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+a {
+  text-decoration: none;
 }
 </style>
