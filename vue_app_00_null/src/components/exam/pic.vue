@@ -8,8 +8,7 @@
           {{read}}
         </p>
         <img
-          :id="key"
-          class="lastimg"
+          :class="{lastimg:true,play:live}"
           src="//cdnmusic.migu.cn/v3/static/img/common/default/btn-play.png"
           alt
         />
@@ -21,14 +20,17 @@
 <script>
 export default {
   props: ["pig", "read", "font", "key"], //父传子的参数
+  data() {
+    return {
+      live: true
+    };
+  },
   methods: {
     play() {
-      let p3 = document.getElementById(key);
-      p3.style.display = "block"; //设置鼠标移入事件
+      this.live = false;
     },
     unplay() {
-      let p3 = document.getElementById(key);
-      p3.style.display = "none"; //设置鼠标移出事件
+      this.live = true;
     }
   }
 };
@@ -78,6 +80,8 @@ export default {
   top: 35%;
   left: 35%;
   width: 30%;
+}
+.play {
   display: none;
 }
 .font {

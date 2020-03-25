@@ -23,7 +23,7 @@ export default {
         "http://d.musicapp.migu.cn/ugcdata/playListimg/9e254b35-18fe-470e-b3b7-0985536d96ee.jpg",
         "http://d.musicapp.migu.cn/ugcdata/playListimg/9e254b35-18fe-470e-b3b7-0985536d96ee.jpg"
       ],
-      read: ["173.5W", "121W"],
+      read: ["173W", "121W"],
       font: ["享受阳光，追随阳光", "工作必备：轻快华语"]
     };
   },

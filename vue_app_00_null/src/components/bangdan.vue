@@ -61,15 +61,18 @@
               alt
             />
           </div>
-          <div>
+          <div class="topthr">
             <div>
-              <h3>尖叫新歌榜</h3>
-              <br />
+              <h1 style="color:#333;margin-bottom:5px">尖叫新歌榜</h1>
               <span>更新时间：2020-03-24</span>
             </div>
-            <div>
-              <a href>播放选中歌曲</a>
-              <a href>添加到</a>
+            <div class="but">
+              <a href class="bor" style="background:#e91e63;color:#fff">
+                <img src="../img/播放.png" alt /> 播放选中歌曲
+              </a>
+              <a href class="bor">
+                <img src="../img/添加.png" alt /> 添加到
+              </a>
             </div>
           </div>
         </div>
@@ -92,7 +95,33 @@ export default {
 </script>
 <style scoped>
 .center {
-  margin: 3rem 6%;
+  margin: 3rem 6%; /*外层*/
   display: flex;
+}
+.centertop {
+  display: flex; /*右侧外二*/
+}
+.centertop img:first-of-type {
+  width: 180px; /*大图片*/
+}
+.centerall {
+  /*右侧最外层*/
+  margin: 0 5%;
+}
+.bor {
+  border-radius: 30px;
+  border: 1px solid #666;
+  margin: 0 18.2px 0 0;
+  padding: 5px 18.2px;
+  color: #666;
+}
+.but .bor img {
+  width: 1rem;
+}
+.topthr {
+  margin-left: 2rem;
+}
+.but {
+  margin-top: 30%;
 }
 </style>
