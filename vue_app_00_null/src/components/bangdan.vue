@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="all">
     <tit></tit>
     <div class="center">
       <div>
@@ -76,12 +76,17 @@
             </div>
           </div>
         </div>
+        <mytable></mytable>
+        <Page style="text-align:center;margin-top:1rem" @on-change="shua" :total="50" />
       </div>
     </div>
+    <bottom></bottom>
   </div>
 </template>
 <script>
 import tit from "./exam/tit.vue";
+import mytable from "./exam/mytable.vue";
+import bottom from "./exam/bottom.vue";
 export default {
   data() {
     return {
@@ -89,7 +94,14 @@ export default {
     };
   },
   components: {
-    tit
+    tit,
+    mytable,
+    bottom
+  },
+  methods: {
+    shua() {
+      document.documentElement.scrollTop = 0;
+    }
   }
 };
 </script>
@@ -107,6 +119,7 @@ export default {
 .centerall {
   /*右侧最外层*/
   margin: 0 5%;
+  width: 75%;
 }
 .bor {
   border-radius: 30px;
@@ -123,5 +136,8 @@ export default {
 }
 .but {
   margin-top: 30%;
+}
+.all {
+  min-width: 1024px;
 }
 </style>
