@@ -9,12 +9,14 @@
       :read="read[index]"
       :font="font[index]"
     ></pic>
+    <bottom></bottom>
   </div>
 </template>
 <script>
 import tit from "./exam/tit.vue";
 import lunbo from "./exam/lunbo.vue";
 import pic from "./exam/pic.vue";
+import bottom from "./exam/bottom";
 export default {
   data() {
     return {
@@ -30,7 +32,8 @@ export default {
   components: {
     tit,
     lunbo,
-    pic
+    pic,
+    bottom
   }
 };
 </script>

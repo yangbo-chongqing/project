@@ -4,13 +4,15 @@ import Router from 'vue-router'//引入路由
 import tit from "./components/exam/tit.vue"
 import home from "./components/home.vue"
 import bangdan from './components/bangdan.vue'
+import geshou from "./components/geshou.vue";
 Vue.use(Router)
 export default new Router({
   routes: [
     //配置组件
     { path: '/tit', component: tit },
     { path: '', component: home },
-    { path: '/top', component: bangdan }
+    { path: '/top', component: bangdan },
+    { path: '/singer', component: geshou }
   ]
 })
 
