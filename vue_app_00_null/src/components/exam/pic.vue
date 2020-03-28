@@ -2,7 +2,7 @@
   <div class="fpic">
     <a href>
       <div class="imgp" @mousemove="play" @mouseout="unplay">
-        <img class="firstimg" v-bind:src="pig" alt />
+        <img class="firstimg" style="border-radius:4%" v-bind:src="pig" alt />
         <p>
           <img src="../../img/耳机.png" alt />
           {{read}}
@@ -38,7 +38,7 @@ export default {
 <style  scoped>
 .fpic {
   overflow: hidden;
-  width: 160px; /* 图片放大时不会影响其他布局*/
+  width: 210px; /* 图片放大时不会影响其他布局*/
 }
 .firstimg {
   width: 100%;
