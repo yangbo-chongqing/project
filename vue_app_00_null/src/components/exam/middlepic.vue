@@ -38,7 +38,7 @@ export default {
 <style  scoped>
 .fpic {
   overflow: hidden;
-  width: 210px; /* 图片放大时不会影响其他布局*/
+  width: 100%; /* 图片放大时不会影响其他布局*/
 }
 .firstimg {
   width: 100%;
@@ -57,13 +57,13 @@ export default {
 }
 .imgp {
   position: relative;
-  width: 180px;
+  width: 283px;
   overflow: hidden;
 }
 .fpic p {
   /*图片中的文本框及耳机图标*/
   font-size: 12px;
-  width: 40%;
+  width: 88px;
   position: absolute;
   top: 0.7rem;
   margin: 0;

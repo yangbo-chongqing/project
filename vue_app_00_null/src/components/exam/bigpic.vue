@@ -38,7 +38,14 @@ export default {
 <style  scoped>
 .fpic {
   overflow: hidden;
-  width: 210px; /* 图片放大时不会影响其他布局*/
+  width: 300px; /* 图片放大时不会影响其他布局*/
+  margin: 0;
+  padding: 0;
+  background-image: url(//cdnmusic.migu.cn/v3/static/img/index/album-cover.png);
+  background-repeat: no-repeat;
+  background-size: 200px 180px;
+  margin: 0;
+  padding: 0;
 }
 .firstimg {
   width: 100%;
@@ -49,7 +56,6 @@ export default {
   transition: transform 1s ease 0s;
 }
 .firstimg:hover {
-  opacity: 0.9;
   transform: scale(1.05);
 }
 .fpic p img {
@@ -97,5 +103,10 @@ export default {
 }
 a {
   text-decoration: none;
+}
+.twopic {
+  position: absolute;
+  left: 12px;
+  height: 88%;
 }
 </style>
