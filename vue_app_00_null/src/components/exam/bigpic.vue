@@ -38,7 +38,7 @@ export default {
 <style  scoped>
 .fpic {
   overflow: hidden;
-  width: 300px; /* 图片放大时不会影响其他布局*/
+  width: 220px; /* 图片放大时不会影响其他布局*/
   margin: 0;
   padding: 0;
   background-image: url(//cdnmusic.migu.cn/v3/static/img/index/album-cover.png);

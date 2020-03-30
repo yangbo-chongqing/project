@@ -114,43 +114,21 @@
         </div>
       </div>
     </div>
-    <div style="display:flex">
-      <bigpic
-        style="width:100%"
-        :pig="'http://d.musicapp.migu.cn/ugcdata/playListimg/08b95a51-0581-4375-b092-74e77230d9e6.jpg'"
-        :read="'1554.7W'"
-        :font="'大牌新歌超强推荐'"
-      ></bigpic>
-      <bigpic
-        style="width:100%"
-        :pig="'http://d.musicapp.migu.cn/ugcdata/playListimg/08b95a51-0581-4375-b092-74e77230d9e6.jpg'"
-        :read="'1554.7W'"
-        :font="'大牌新歌超强推荐'"
-      ></bigpic>
-      <bigpic
-        style="width:100%"
-        :pig="'http://d.musicapp.migu.cn/ugcdata/playListimg/08b95a51-0581-4375-b092-74e77230d9e6.jpg'"
-        :read="'1554.7W'"
-        :font="'大牌新歌超强推荐'"
-      ></bigpic>
-      <bigpic
-        style="width:100%"
-        :pig="'http://d.musicapp.migu.cn/ugcdata/playListimg/08b95a51-0581-4375-b092-74e77230d9e6.jpg'"
-        :read="'1554.7W'"
-        :font="'大牌新歌超强推荐'"
-      ></bigpic>
-      <bigpic
-        style="width:100%"
-        :pig="'http://d.musicapp.migu.cn/ugcdata/playListimg/08b95a51-0581-4375-b092-74e77230d9e6.jpg'"
-        :read="'1554.7W'"
-        :font="'大牌新歌超强推荐'"
-      ></bigpic>
-      <bigpic
-        style="width:100%"
-        :pig="'http://d.musicapp.migu.cn/ugcdata/playListimg/08b95a51-0581-4375-b092-74e77230d9e6.jpg'"
-        :read="'1554.7W'"
-        :font="'大牌新歌超强推荐'"
-      ></bigpic>
+    <div class="top2">
+      <div class="top2t">
+        <h2>新碟上架</h2>
+        <a href class="top2tf">更多&gt;</a>
+      </div>
+      <div class="lastblock">
+        <bigpic
+          style="margin:0"
+          v-for="(item,index) of pig5"
+          :key="index"
+          :pig="item"
+          :read="'154.7W'"
+          :font="'大牌新歌超强推荐'"
+        ></bigpic>
+      </div>
     </div>
     <div>
       <bottom></bottom>
@@ -210,6 +188,20 @@ export default {
         "http://d.musicapp.migu.cn/ugcdata/playListimg/7c5113ba-f115-4ab4-aadc-f29363492f13.jpg",
         "http://d.musicapp.migu.cn/ugcdata/playListimg/9e254b35-18fe-470e-b3b7-0985536d96ee.jpg"
       ],
+      pig5: [
+        "http://cdnmusic.migu.cn/picture/2020/0327/2156/AS211c954ab48fa7e04d971d70d2bd72d6.jpg",
+        "http://cdnmusic.migu.cn/picture/2020/0327/2049/ASfd006591460c3dc03aaec8a08ad05dc4.jpg",
+        "http://cdnmusic.migu.cn/picture/2020/0328/2149/AS8a2217955978d2b7077751f2498bd70c.jpg",
+        "http://cdnmusic.migu.cn/picture/2020/0330/0900/AS6c777b9094c6f892778115e499c37f77.jpg",
+        "http://cdnmusic.migu.cn/picture/2020/0326/1428/AS021c3e5a34845b981196f8b4a406e06a.jpg",
+        "http://cdnmusic.migu.cn/picture/2020/0330/1514/AS3511020d68816c927d530f446590bf69.jpg",
+        "http://cdnmusic.migu.cn/picture/2020/0327/1335/AS56cdf2f661901eecf2dae456f723a770.jpg",
+        "http://cdnmusic.migu.cn/picture/2020/0326/1556/AS59c9dd8cc4afb59b18003a116f863fad.jpg",
+        "http://cdnmusic.migu.cn/picture/2020/0320/1921/AM00f11fb553caab8d8d0420180f6a3108.jpg",
+        "http://cdnmusic.migu.cn/picture/2020/0324/1635/AS5752fbf1869e6075892c4d1dbb782a59.jpg",
+        "http://cdnmusic.migu.cn/picture/2020/0320/1921/AMc0f5970332ee1c25a3eda2348c4d45f2.jpg",
+        "http://cdnmusic.migu.cn/picture/2020/0320/1921/AM12db4988293672febd045f1d2ab030d2.jpg"
+      ],
       read: [
         "173W",
         "121W",
@@ -264,7 +256,7 @@ export default {
 <style  scoped>
 .top2 {
   /* 歌单推荐最外层div */
-  margin: 3% 5%;
+  margin: 3% 8%;
 }
 .top2t {
   /* 歌曲推荐 及返回 部分样式 */
@@ -287,7 +279,7 @@ export default {
   flex-flow: row wrap; /*当行溢出时 换行*/
 }
 .topitem {
-  margin-right: 2rem;
+  margin-right: 0.5rem;
   margin-top: 1rem;
 }
 .newsli li {
@@ -315,7 +307,7 @@ export default {
 .tou {
   /*第三部分左侧透明覆盖部分*/
   width: 100%;
-  height: 404px;
+  height: 414px;
   background: rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 0;
@@ -352,5 +344,12 @@ export default {
 }
 .fontcolor {
   color: #e91e63;
+}
+.lastblock {
+  /*最后一块新碟上架*/
+  display: flex;
+  margin-top: 2rem;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 </style>

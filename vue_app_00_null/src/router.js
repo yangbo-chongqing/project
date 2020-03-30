@@ -5,6 +5,7 @@ import tit from "./components/exam/tit.vue"
 import home from "./components/home.vue"
 import bangdan from './components/bangdan.vue'
 import geshou from "./components/geshou.vue";
+import gedan from "./components/gedan.vue"
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -12,7 +13,8 @@ export default new Router({
     { path: '/tit', component: tit },
     { path: '', component: home },
     { path: '/top', component: bangdan },
-    { path: '/singer', component: geshou }
+    { path: '/singer', component: geshou },
+    { path: '/song', component: gedan }
   ]
 })
 
