@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="all">
     <tit></tit>
     <div class="titstyle">
       <div class="tit2">
@@ -100,7 +100,7 @@
       </div>
       <div class="bottomall" v-if="this.aa=='推荐'">
         <midpic
-          style="margin:0"
+          style="margin-left:12px"
           v-for="(item,index) of pig5"
           :key="index"
           :pig="item"
@@ -193,11 +193,13 @@ export default {
 };
 </script>
 <style scoped>
+.all {
+  min-width: 1180px;
+}
 .titstyle {
   background: #f2f2f2;
   padding: 2rem 5%; /*顶部div样式*/
   text-align: center;
-  min-width: 1180px;
 }
 .ulstyle1 li {
   list-style: none;
@@ -256,6 +258,10 @@ export default {
   margin-top: 2rem;
   flex-flow: row wrap;
   justify-content: space-between;
+}
+.bottomall::after {
+  content: "";
+  width: 250px;
 }
 .last {
   /*换页*/

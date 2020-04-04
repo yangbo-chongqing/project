@@ -28,9 +28,9 @@
         <div class="rpic">
           <pic
             class="topitem"
-            v-for="(item,index) in pig"
+            v-for="(item,index) in a"
             :key="index"
-            :pig="item"
+            :pig="item.name"
             :read="read[index]"
             :font="font[index]"
           ></pic>
@@ -114,14 +114,14 @@
         </div>
       </div>
     </div>
-    <div class="top2">
+    <div class="top22">
       <div class="top2t">
         <h2>新碟上架</h2>
         <a href class="top2tf">更多&gt;</a>
       </div>
       <div class="lastblock">
         <bigpic
-          style="margin:0"
+          style="margin-left:10px"
           v-for="(item,index) of pig5"
           :key="index"
           :pig="item"
@@ -228,7 +228,8 @@ export default {
         "不再无聊，开车必备"
       ],
       val: 1,
-      n: 1
+      n: 1,
+      a: ""
     };
   },
   components: {
@@ -249,7 +250,16 @@ export default {
     },
     call3() {
       this.n = 3;
+    },
+    go() {
+      var url = "project";
+      this.axios.get(url).then(res => {
+        this.a = res.data;
+      });
     }
+  },
+  mounted() {
+    this.go();
   }
 };
 </script>
@@ -257,6 +267,13 @@ export default {
 .top2 {
   /* 歌单推荐最外层div */
   margin: 3% 8%;
+  min-width: 1200px;
+}
+.top22 {
+  /* 歌单推荐最外层div */
+  margin: 3% 8%;
+  max-width: 1800px;
+  min-width: 1200px;
 }
 .top2t {
   /* 歌曲推荐 及返回 部分样式 */
@@ -351,5 +368,9 @@ export default {
   margin-top: 2rem;
   flex-flow: row wrap;
   justify-content: space-between;
+}
+.lastblock::after {
+  content: "";
+  width: 220px;
 }
 </style>

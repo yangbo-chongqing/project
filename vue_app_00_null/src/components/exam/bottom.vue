@@ -113,6 +113,7 @@ export default {};
 .bottom {
   /*整体外部div*/
   width: 100%;
+  min-width: 1240px;
 }
 .top {
   /*上边一个外层div*/
