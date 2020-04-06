@@ -8,13 +8,13 @@
     <div class="titfont">
       <ul>
         <li>
-          <a href>音乐</a>
+          <a @click="gosing">音乐</a>
         </li>
         <li>
-          <a href>现场</a>
+          <a @click="gosong">现场</a>
         </li>
         <li>
-          <a href>我的</a>
+          <a @click="gobangdan">我的</a>
         </li>
       </ul>
     </div>
@@ -25,7 +25,7 @@
     <div class="simg">
       <ul>
         <li>
-          <a href>
+          <a @click="govip">
             <img src="../../img/皇冠.png" alt />白金会员
           </a>
         </li>
@@ -43,6 +43,24 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    gosing() {
+      this.$router.push("./song");
+    },
+    gosong() {
+      this.$router.push("./singer");
+    },
+    gobangdan() {
+      this.$router.push("./top");
+    },
+    govip() {
+      this.$router.push("./vip");
+    }
+  }
+};
+</script>
 <style  scoped>
 .tit {
   /*整体父级*/

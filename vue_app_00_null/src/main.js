@@ -21,7 +21,7 @@ import "./font/iconfont.css"
 // 1：引入axios库
 import axios from "axios"
 // 2：配置访问服务器基础路径
-axios.defaults.baseURL = "http://127.0.0.1:4000/"
+axios.defaults.baseURL = "http://lsybbe.applinzi.com/"
 // 3：配置保存session数据
 axios.defaults.withCredentials = true
 // 4：注册

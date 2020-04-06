@@ -252,7 +252,7 @@ export default {
       this.n = 3;
     },
     go() {
-      var url = "project";
+      var url = "user";
       this.axios.get(url).then(res => {
         this.a = res.data;
       });
