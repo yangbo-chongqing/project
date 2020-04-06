@@ -4,7 +4,7 @@
       <div class="imgp" @mousemove="play" @mouseout="unplay">
         <img class="firstimg" v-bind:src="pig" alt />
         <p>
-          <img src="../../img/耳机.png" alt />
+          <img src="../../img/erji.png" alt />
           {{read}}
         </p>
         <img
